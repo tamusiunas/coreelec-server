@@ -1,0 +1,13 @@
+[Unit]
+Description=Kill splash-screen program running
+After=network-online.target
+Requires=network-online.target
+
+[Service]
+Type=oneshot
+Restart=no
+RemainAfterExit=yes
+ExecStart=killall -s SIGUSR1 splash-image
+
+[Install]
+WantedBy=multi-user.target
