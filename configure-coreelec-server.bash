@@ -5,10 +5,26 @@
 #
 
 #
+# Check if it's already installed
+#
+if [ -f "/storage/.coreelec-server-installed" ]; then
+  echo ""
+  echo "corelec-server is already installed"
+  echo ""
+  exit 1
+fi
+
+#
 # Install Entware
 #
+echo ""
+echo "Installing Entware"
+echo ""
 echo "n" | /usr/sbin/installentware 
 opkg install gcc busybox ldd make gawk sed python3-pip patch diffutils coreutils-install git
+#
+# Install headers
+#
 arch_uname=$(uname -m)
 if [ -z "${arch_uname##*aarch64*}" ]; then
   wget -qO- http://bin.entware.net/aarch64-k3.10/include/include.tar.gz | tar xvz -C /opt/include
@@ -25,15 +41,24 @@ if [ "$path_found" == "" ]; then
   echo "source /opt/bin/gcc_env.sh" >> /storage/.profile
 fi
 
-
 #
 # Install system.d scripts
 #
-
+echo ""
+echo "Installing system.d scripts"
+echo ""
+# Kill splash-screen program
+curl https://raw.githubusercontent.com/fabriciotamusiunas/coreelec-server/main/system.d/kill-splash-screen.service > /storage/.config/system.d/kill-splash-screen.service
+systemctl daemon-reload
+systemctl enable kill-splash-screen.service
 
 #
 # Disable Kodi
 #
+echo ""
+echo "Disabling kodi"
+echo "To enable it again type \"systemctl unmask kodi ; systemctl enable kodi ; systemctl start kodi\"
+echo ""
 systemctl stop kodi
 systemctl disable kodi
 systemctl mask kodi
