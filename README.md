@@ -37,4 +37,3 @@ Docker 20.10 | [docker-coreelec](https://github.com/fabriciotamusiunas/docker-co
 # opkg remove <software> # remove package
 # opkg -help # help
 ```
-
