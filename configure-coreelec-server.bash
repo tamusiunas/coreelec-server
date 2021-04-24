@@ -67,6 +67,10 @@ systemctl mask kodi
 # Install Docker
 #
 curl https://raw.githubusercontent.com/fabriciotamusiunas/docker-coreelec/main/auto-install-docker-coreelec.bash -o /storage/auto-install-docker-coreelec.bash
-bash auto-install-docker-coreelec.bash
+bash /storage/auto-install-docker-coreelec.bash
+rm /storage/auto-install-docker-coreelec.bash
 
-
+#
+# It's installed
+#
+/storage/.coreelec-server-installed
