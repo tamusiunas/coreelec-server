@@ -48,7 +48,7 @@ echo ""
 echo "Installing system.d scripts"
 echo ""
 # Kill splash-screen program
-curl https://raw.githubusercontent.com/fabriciotamusiunas/coreelec-server/main/system.d/kill-splash-screen.service > /storage/.config/system.d/kill-splash-screen.service
+curl https://raw.githubusercontent.com/fabriciotamusiunas/coreelec-server/main/system.d/kill-splash-screen.service -o /storage/.config/system.d/kill-splash-screen.service
 systemctl daemon-reload
 systemctl enable kill-splash-screen.service
 
