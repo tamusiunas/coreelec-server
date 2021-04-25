@@ -5,11 +5,11 @@
 #
 
 #
-# Check if it's already installed
+# Check if it's already configured
 #
 if [ -f "/storage/.coreelec-server-installed" ]; then
   echo ""
-  echo "corelec-server is already installed"
+  echo "corelec-server is already configured"
   echo ""
   exit 1
 fi
@@ -25,6 +25,7 @@ opkg install gcc busybox ldd make gawk sed python3-pip patch diffutils coreutils
 #
 # Install headers
 #
+mkdir -p /opt/include
 arch_uname=$(uname -m)
 if [ -z "${arch_uname##*aarch64*}" ]; then
   wget -qO- http://bin.entware.net/aarch64-k3.10/include/include.tar.gz | tar xvz -C /opt/include
