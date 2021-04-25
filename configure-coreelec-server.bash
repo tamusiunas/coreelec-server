@@ -21,6 +21,7 @@ echo ""
 echo "Installing Entware"
 echo ""
 echo "n" | /usr/sbin/installentware 
+/opt/bin/opkg update
 /opt/bin/opkg install gcc busybox ldd make gawk sed python3-pip patch diffutils coreutils-install git tar file
 #
 # Install headers
