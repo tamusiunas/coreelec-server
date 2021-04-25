@@ -74,7 +74,13 @@ touch /storage/.coreelec-server-installed
 # Install Docker
 #
 curl https://raw.githubusercontent.com/fabriciotamusiunas/docker-coreelec/main/auto-install-docker-coreelec.bash -o /storage/auto-install-docker-coreelec.bash
-bash /storage/auto-install-docker-coreelec.bash
+bash /storage/auto-install-docker-coreelec.bash noshutdown
+rm /storage/auto-install-docker-coreelec.bash
+echo ""
+echo "To complete the configuration reboot your box"
+echo ""
+
+
 
 #
 # It's installed
