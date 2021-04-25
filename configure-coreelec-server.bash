@@ -64,6 +64,11 @@ systemctl disable kodi
 systemctl mask kodi
 
 #
+# Create /storage/.coreelec-server-installed to know that coreelec is installed
+#
+touch /storage/.coreelec-server-installed
+
+#
 # Install Docker
 #
 curl https://raw.githubusercontent.com/fabriciotamusiunas/docker-coreelec/main/auto-install-docker-coreelec.bash -o /storage/auto-install-docker-coreelec.bash
@@ -73,4 +78,3 @@ rm /storage/auto-install-docker-coreelec.bash
 #
 # It's installed
 #
-/storage/.coreelec-server-installed
