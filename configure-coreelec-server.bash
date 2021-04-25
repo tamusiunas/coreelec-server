@@ -50,7 +50,7 @@ echo ""
 echo "Installing system.d scripts"
 echo ""
 # Kill splash-screen program
-curl https://raw.githubusercontent.com/fabriciotamusiunas/coreelec-server/main/system.d/kill-splash-screen.service -o /storage/.config/system.d/kill-splash-screen.service
+curl https://raw.githubusercontent.com/tamusiunas/coreelec-server/main/system.d/kill-splash-screen.service -o /storage/.config/system.d/kill-splash-screen.service
 systemctl daemon-reload
 systemctl enable kill-splash-screen.service
 
@@ -73,7 +73,7 @@ touch /storage/.coreelec-server-installed
 #
 # Install Docker
 #
-curl https://raw.githubusercontent.com/fabriciotamusiunas/docker-coreelec/main/auto-install-docker-coreelec.bash -o /storage/auto-install-docker-coreelec.bash
+curl https://raw.githubusercontent.com/tamusiunas/docker-coreelec/main/auto-install-docker-coreelec.bash -o /storage/auto-install-docker-coreelec.bash
 bash /storage/auto-install-docker-coreelec.bash noshutdown
 rm /storage/auto-install-docker-coreelec.bash
 echo ""
