@@ -19,6 +19,22 @@ curl https://raw.githubusercontent.com/fabriciotamusiunas/coreelec-server/main/c
 bash /storage/configure-coreelec-server.bash
 ```
 
+## How to disable Kodi manually
+
+```bash
+systemctl stop kodi
+systemctl disable kodi
+systemctl mask kodi
+```
+
+## How to reenable Kodi
+
+```bash
+systemctl unmask kodi
+systemctl enable kodi
+systemctl start kodi
+```
+
 ## Packages installed
 
 Packages | Source
