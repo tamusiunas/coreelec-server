@@ -14,9 +14,9 @@ This project provides a bash script to disable Kodi, install [Entware](https://g
 - Access the device via SSH
 
 ```bash
-# curl https://raw.githubusercontent.com/fabriciotamusiunas/coreelec-server/main/configure-coreelec-server.bash -o \
+curl https://raw.githubusercontent.com/fabriciotamusiunas/coreelec-server/main/configure-coreelec-server.bash -o \
   /storage/configure-coreelec-server.bash
-# bash /storage/configure-coreelec-server.bash
+bash /storage/configure-coreelec-server.bash
 ```
 
 ## Packages installed
@@ -30,10 +30,10 @@ Docker 20.10 | [docker-coreelec](https://github.com/fabriciotamusiunas/docker-co
 ## How to use opkg
 
 ```bash
-# opkg update # update packages list
-# opkg list # list available packages
-# opkg search <software> # search for a package
-# opkg upgrade # upgrade upgradeable packages
-# opkg remove <software> # remove package
-# opkg -help # help
+opkg update # update packages list
+opkg list # list available packages
+opkg search <software> # search for a package
+opkg upgrade # upgrade upgradeable packages
+opkg remove <software> # remove package
+opkg -help # help
 ```
