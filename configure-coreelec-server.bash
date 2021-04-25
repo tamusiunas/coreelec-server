@@ -57,7 +57,7 @@ systemctl enable kill-splash-screen.service
 #
 echo ""
 echo "Disabling kodi"
-echo "To enable it again type \"systemctl unmask kodi ; systemctl enable kodi ; systemctl start kodi\"
+echo "To enable it again type \"systemctl unmask kodi ; systemctl enable kodi ; systemctl start kodi\""
 echo ""
 systemctl stop kodi
 systemctl disable kodi
