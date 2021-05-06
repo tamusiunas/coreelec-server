@@ -66,6 +66,11 @@ systemctl disable kodi
 systemctl mask kodi
 
 #
+# Increase vm.max_map_count
+#
+echo "vm.max_map_count=262144" > /storage/.config/sysctl.d/vm.conf
+
+#
 # Create /storage/.coreelec-server-installed to know that coreelec is installed
 #
 touch /storage/.coreelec-server-installed
