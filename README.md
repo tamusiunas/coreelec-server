@@ -6,7 +6,7 @@ Usually new software is installed through add-on using the GUI interface (Kodi),
 
 Generally boxes sold with the Amlogic processors line have reasonably high memory for this type of system (4/8 GB) and multi-core processor with a very attractive price. The possibility of using it as a server is very reasonable. 
 
-This project provides a bash script to disable Kodi, install [Entware](https://github.com/Entware/Entware/wiki) (a package manager usually used by OpenWRT), software development tools (with headers) and [Docker 20.10](https://github.com/tamusiunas/docker-coreelec).
+This project provides a bash script to disable Kodi, install [Entware](https://github.com/Entware/Entware/wiki) (a package manager usually used by OpenWRT), software development tools (with headers) and [Docker 22.06](https://github.com/tamusiunas/docker-coreelec).
 
 ## Usage
 
@@ -41,7 +41,7 @@ Packages | Source
 ---------|-------
 gcc, busybox, ldd, make, gawk, sed, python3-pip, patch, diffutils, coreutils-install, git | [Entware](https://github.com/Entware/Entware/wiki)
 packages and Linux headers | [Entware](https://github.com/Entware/Entware/wiki)
-Docker 20.10 | [docker-coreelec](https://github.com/tamusiunas/docker-coreelec)
+Docker 22.06 | [docker-coreelec](https://github.com/tamusiunas/docker-coreelec)
 
 ## How to use opkg
 
